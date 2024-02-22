@@ -50,4 +50,19 @@ Card.propTypes = {
     country: PropTypes.object
 };
 
-export { Country, Search, Card };
+const CountryDetail = ({ country}) =>
+{
+    return (
+        <div>
+            <h1> {country.name.common}</h1>
+            <p>Population: {country.population}</p>
+            <p>Region: {country.region}</p>
+            <p> Capital: {country.capital}</p>
+        </div>
+    );
+};
+
+CountryDetail.propTypes = {
+    country: PropTypes.object
+};
+export { Country, Search, Card, CountryDetail };

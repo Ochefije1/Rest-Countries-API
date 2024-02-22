@@ -1,18 +1,18 @@
-
 import './App.css';
-
-import Country from './components/country/country';
-import {Layout } from './layout/layout';
+import {Country, CountryDetail} from './components/country/country';
+import {layout } from './layout/layout';
 import {Routes, Route} from 'react-router-dom'
 
 function App() {
   return (
-    <>
-    <Routes path="/">
-      <Route index element={<Country/>}/>
-      <Route path='detail' element={<CountryDetail/>}/>
-    </Routes>
-    </>
+    <div>
+      <layout>
+        <Routes >
+          <Route path="/" element={<Country/>} />
+          <Route path='/detail' element={<CountryDetail/>} />
+        </Routes>
+      </layout>
+    </div>
 
   );
 }
